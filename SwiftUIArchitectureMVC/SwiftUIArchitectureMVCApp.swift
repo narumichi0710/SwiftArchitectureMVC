@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUIArchitectureMVCApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SearchMainView()
         }
     }
 }
