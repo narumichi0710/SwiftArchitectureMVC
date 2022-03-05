@@ -10,7 +10,7 @@ import Foundation
 struct Users: Codable {
     let totalCount: Int
     let incompleteResults: Bool
-    let items: [Users]
+    let items: [User]
     
     private enum CodingKeys: String, CodingKey {
         case totalCount = "totalCount"
@@ -20,7 +20,7 @@ struct Users: Codable {
 }
 
 struct User: Codable, Identifiable {
-    let id: UUID
+    let id: String = UUID().uuidString
     let login: String
     let avatarUrl: String
     let reposUrl: String
