@@ -9,7 +9,13 @@ import Foundation
 
 class SearchModel: ObservableObject {
     @Published var users = [User]()
+    @Published var isNotFound = false
+
+    @Published var repositories = [Repository]()
+    @Published var isLoading = true
+
     @Published var error: ModelError?
+    
     
     private var endPoint: URLComponents {
         var components = URLComponents()
@@ -69,7 +75,39 @@ class SearchModel: ObservableObject {
     }
     
     private func publishUsers(users: Users) {
+        if users.totalCount == 0 {
+            isNotFound = true
+            self.users = [User]()
+            return
+        }
         self.users = users.items
+    }
+
+    
+    public func fetchRepositories(urlString: String) {
+        defer {
+            isLoading = false
+        }
+
+        guard let url = URL(string: urlString) else {
+            error = .urlError
+            return
+        }
+        
+        Task {
+            let result = await fetch(url: url)
+            
+            switch result {
+            case .success(let data):
+                guard let repositories = try? JSONDecoder().decode([Repository].self, from: data) else {
+                    error = .jsonParseError(String(data: data, encoding: .utf8) ?? "")
+                    return
+                }
+                self.repositories = repositories
+            case .failure(let error):
+                self.error = .responseError(error)
+            }
+        }
     }
 }
 
