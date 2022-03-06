@@ -28,8 +28,8 @@ struct UserCard: View {
     }
 }
 
-//struct UserCard_Previews: PreviewProvider {
-//    static var previews: some View {
-//        UserCard()
-//    }
-//}
+struct UserCard_Previews: PreviewProvider {
+    static var previews: some View {
+        UserCard(user: User.mockUser)
+    }
+}

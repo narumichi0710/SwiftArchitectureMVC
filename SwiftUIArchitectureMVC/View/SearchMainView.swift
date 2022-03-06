@@ -15,6 +15,9 @@ struct SearchMainView: View {
         NavigationView {
             VStack {
                 TextField("Search User Name", text: $searchText)
+                    .onChange(of: searchText, perform: { newValue in
+                        UserController(model: model, query: searchText).loadStart()
+                    })
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.asciiCapable)
                     .padding()
@@ -22,16 +25,15 @@ struct SearchMainView: View {
                 if let error = model.error {
                     Text(error.localizedDescription)
                 } else {
-                    List(model.users) { user in
-                        NavigationLink(
-                            destination:RepositoryView(repositoryUrlString:user.reposUrl)
-                        ) {
-                            UserCard(user: user)
+                        List(model.users) { user in
+                            NavigationLink(destination: RepositoryView(repositoryUrlString: user.reposUrl)) {
+                                UserCard(user: user)
+                            }
                         }
-                    }
-                    .refreshable {
-                        UserController(model: model, query: searchText).loadStart()
-                    }
+                        .refreshable {
+                            UserController(model: model, query: searchText).loadStart()
+                        }
+                    
                 }
             }
             .navigationTitle("🔍Search Github User")
