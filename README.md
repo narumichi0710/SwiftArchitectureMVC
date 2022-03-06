@@ -1,4 +1,4 @@
-# SwiftUIArchitectureMVC
+# SwiftArchitectureMVC
 
 ### Referred to MVC pattern in [iOSアプリ設計パターン入門](https://peaks.cc/books/iOS_architecture)
 
