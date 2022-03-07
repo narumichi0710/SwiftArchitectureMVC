@@ -15,6 +15,15 @@
 		5257C1E027D25E3500701C47 /* SwiftUIArchitectureMVCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5257C1DF27D25E3500701C47 /* SwiftUIArchitectureMVCUITests.swift */; };
 		5257C1E227D25E3500701C47 /* SwiftUIArchitectureMVCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5257C1E127D25E3500701C47 /* SwiftUIArchitectureMVCUITestsLaunchTests.swift */; };
 		5257C1F027D2603800701C47 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5257C1EF27D2603800701C47 /* SearchModel.swift */; };
+		5257C1F427D34FD500701C47 /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5257C1F327D34FD500701C47 /* RepositoryView.swift */; };
+		5257C1F627D3517700701C47 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5257C1F527D3517600701C47 /* Users.swift */; };
+		5257C1FD27D3638E00701C47 /* ScopeFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5257C1FC27D3638E00701C47 /* ScopeFunc.swift */; };
+		5257C1FF27D4987A00701C47 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5257C1FE27D4987A00701C47 /* UserController.swift */; };
+		5257C20327D49B6500701C47 /* ModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5257C20227D49B6500701C47 /* ModelError.swift */; };
+		5257C20527D4A04B00701C47 /* UserCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5257C20427D4A04B00701C47 /* UserCard.swift */; };
+		5257C20727D4A80E00701C47 /* RepositoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5257C20627D4A80E00701C47 /* RepositoryCard.swift */; };
+		5257C20927D4A83C00701C47 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5257C20827D4A83C00701C47 /* Repository.swift */; };
+		5257C20B27D4A8A500701C47 /* RepositoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5257C20A27D4A8A500701C47 /* RepositoryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +55,15 @@
 		5257C1DF27D25E3500701C47 /* SwiftUIArchitectureMVCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIArchitectureMVCUITests.swift; sourceTree = "<group>"; };
 		5257C1E127D25E3500701C47 /* SwiftUIArchitectureMVCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIArchitectureMVCUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5257C1EF27D2603800701C47 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		5257C1F327D34FD500701C47 /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
+		5257C1F527D3517600701C47 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		5257C1FC27D3638E00701C47 /* ScopeFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeFunc.swift; sourceTree = "<group>"; };
+		5257C1FE27D4987A00701C47 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		5257C20227D49B6500701C47 /* ModelError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelError.swift; sourceTree = "<group>"; };
+		5257C20427D4A04B00701C47 /* UserCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCard.swift; sourceTree = "<group>"; };
+		5257C20627D4A80E00701C47 /* RepositoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCard.swift; sourceTree = "<group>"; };
+		5257C20827D4A83C00701C47 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		5257C20A27D4A8A500701C47 /* RepositoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +114,7 @@
 		5257C1C327D25E3500701C47 /* SwiftUIArchitectureMVC */ = {
 			isa = PBXGroup;
 			children = (
+				5257C1FB27D3637800701C47 /* Extension */,
 				5257C1F227D2606D00701C47 /* Controller */,
 				5257C1F127D2606500701C47 /* View */,
 				5257C1EE27D25FE600701C47 /* Model */,
@@ -135,6 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				5257C1EF27D2603800701C47 /* SearchModel.swift */,
+				5257C1F527D3517600701C47 /* Users.swift */,
+				5257C20227D49B6500701C47 /* ModelError.swift */,
+				5257C20827D4A83C00701C47 /* Repository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,6 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				5257C1C627D25E3500701C47 /* SearchMainView.swift */,
+				5257C1F327D34FD500701C47 /* RepositoryView.swift */,
+				5257C20427D4A04B00701C47 /* UserCard.swift */,
+				5257C20627D4A80E00701C47 /* RepositoryCard.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,8 +175,18 @@
 		5257C1F227D2606D00701C47 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5257C1FE27D4987A00701C47 /* UserController.swift */,
+				5257C20A27D4A8A500701C47 /* RepositoryController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5257C1FB27D3637800701C47 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5257C1FC27D3638E00701C47 /* ScopeFunc.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,8 +319,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5257C1FD27D3638E00701C47 /* ScopeFunc.swift in Sources */,
 				5257C1C727D25E3500701C47 /* SearchMainView.swift in Sources */,
 				5257C1C527D25E3500701C47 /* SwiftUIArchitectureMVCApp.swift in Sources */,
+				5257C20727D4A80E00701C47 /* RepositoryCard.swift in Sources */,
+				5257C1F427D34FD500701C47 /* RepositoryView.swift in Sources */,
+				5257C20927D4A83C00701C47 /* Repository.swift in Sources */,
+				5257C20527D4A04B00701C47 /* UserCard.swift in Sources */,
+				5257C1FF27D4987A00701C47 /* UserController.swift in Sources */,
+				5257C1F627D3517700701C47 /* Users.swift in Sources */,
+				5257C20B27D4A8A500701C47 /* RepositoryController.swift in Sources */,
+				5257C20327D49B6500701C47 /* ModelError.swift in Sources */,
 				5257C1F027D2603800701C47 /* SearchModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
